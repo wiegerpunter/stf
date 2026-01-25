@@ -1,3 +1,4 @@
+console.log('scripts.js is loaded');
 $(document).ready(function () {
 
     /***************** Waypoints ******************/
@@ -209,6 +210,28 @@ $(document).ready(function () {
 
     $('#add-to-cal').html(myCalendar);
 
+    /************** Day and Evening guest separation ************/
+    
+    $('#invite-form').on('submit', function (e) {
+        
+        e.preventDefault();
+        $("#daggast").hide();
+        $("#avondgast").hide();
+        $("#error-message").hide();
+        $("#common-content").hide();
+        console.log('Invite code entered:', $('#invite_code').val());
+        console.log('MD5 hash:', MD5($('#invite_code').val()));
+    
+        if (MD5($('#invite_code').val()) == 'b4683fef34f6bb7234f2603699bd0ded') {
+            $('#daggast').show();
+            $('#common-content').show();
+        } else if (MD5($('#invite_code').val()) == 'd15a4abc1597185612e1a3ec4d9ecb87') {
+            $('#avondgast').show();
+            $('#common-content').show();
+        } else {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> De invite code is niet correct.'));
+        }
+    });
 
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
