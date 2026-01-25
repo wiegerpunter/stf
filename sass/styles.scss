@@ -380,19 +380,19 @@ Social share buttons
 }
 
 /* Alert wrapper*/
-#alert-wrapper {
-    position: fixed; /* Fix it to the viewport */
-    top: 20px; /* Adjust to appear near the top of the viewport */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for perfect centering */
-    z-index: 9999; /* Ensure it appears above other elements */
-    background-color: #f8d7da; /* Example background for danger alert */
-    color: #721c24; /* Example text color for danger alert */
-    padding: 15px;
-    border: 1px solid #f5c6cb;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+// #alert-wrapper {
+//     position: fixed; /* Fix it to the viewport */
+//     top: 20px; /* Adjust to appear near the top of the viewport */
+//     left: 50%; /* Center horizontally */
+//     transform: translateX(-50%); /* Adjust for perfect centering */
+//     z-index: 9999; /* Ensure it appears above other elements */
+//     background-color: #f8d7da; /* Example background for danger alert */
+//     color: #721c24; /* Example text color for danger alert */
+//     padding: 15px;
+//     border: 1px solid #f5c6cb;
+//     border-radius: 5px;
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+// }
 
 
 /* ==========================================================================
@@ -743,14 +743,24 @@ Embed video
 ========================================================================== */
 #video-bg {
   height: 300px;
+  position: relative
+}
+#bgndVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 #video-content {
   width: 100%;
   height: 100%;
-  padding-top: 100px;
+  padding-top: 10px;
   position: relative;
   background: rgba(17, 17, 17, 0.5);
   text-align: center;
+  z-index: 2;
 }
 #video-content h5 {
   color: #ffffff;
