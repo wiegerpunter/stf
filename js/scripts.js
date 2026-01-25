@@ -207,8 +207,40 @@ $(document).ready(function () {
             URL: 'https://maps.app.goo.gl/iSoiyddQaawVXN6j9'
         }
     });
+    var myCalendarAvond = createCalendar({
+        options: {
+            class: '',
+            // You can pass an ID. If you don't, one will be generated for you
+            id: ''
+        },
+        data: {
+            // Event title
+            title: "Meike & Wieger's bruiloft",
+
+            // Event start date
+            start: new Date('April 25, 2026 20:00'),
+
+            // Event duration (IN MINUTES)
+            // duration: 660,
+
+            // You can also choose to set an end time
+            // If an end time is set, this will take precedence over duration
+            end: new Date('Apr 26, 2026 01:00'),
+
+            // Event Address
+            address: 'De Hut van Mie Pils, Waalre',
+
+            // Event Description
+            description: "We kunnen niet wachten je te verwelkomen. Voor vragen, contacteer de ceremoniemeesters Margot of Mieke via +31 6 12345678.",
+            
+            // Event Location
+            URL: 'https://maps.app.goo.gl/iSoiyddQaawVXN6j9'
+        }
+    });
 
     $('#add-to-cal').html(myCalendar);
+    $('#add-to-cal-avond').html(myCalendarAvond);
+
 
     /************** Day and Evening guest separation ************/
     
@@ -219,8 +251,6 @@ $(document).ready(function () {
         $("#avondgast").hide();
         $("#error-message").hide();
         $("#common-content").hide();
-        console.log('Invite code entered:', $('#invite_code').val());
-        console.log('MD5 hash:', MD5($('#invite_code').val()));
     
         if (MD5($('#invite_code').val()) == 'b4683fef34f6bb7234f2603699bd0ded') {
             $('#daggast').show();
@@ -240,10 +270,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
-        if (MD5($('#invite_code').val()) !== '815d73b64a7c90c5de1b8d7a8a79ba0e') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> De invite code is niet correct.'));
-        } else {
-            $.post('https://script.google.com/macros/s/AKfycbzS5YN-EYHXNm2fRbATaFJ2JbmpP4hi28aN5NwDuLtvcY_0Qgtwy6A_wI5VvrnnIfPO0g/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbxMhIiLyqulst-iMcJ4zVtqB3zhDGf40QqEAAKr6AawfuFh0CflB5U1MbwBTzNAYbPj1g/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -257,16 +284,36 @@ $(document).ready(function () {
                     console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
                 });
-        }
     });
+    
+    $('#rsvp-form-avondgast').on('submit', function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
 
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
+
+        $.post('https://script.google.com/macros/s/AKfycbxMhIiLyqulst-iMcJ4zVtqB3zhDGf40QqEAAKr6AawfuFh0CflB5U1MbwBTzNAYbPj1g/exec', data)    
+                .done(function (data) {
+                    console.log(data);
+                    if (data.result === "error") {
+                        $('#alert-wrapper').html(alert_markup('danger', data.message));
+                    } else {
+                        $('#alert-wrapper').html('');
+                        $('#rsvp-modal-avond').modal('show');
+                    }
+                })
+                .fail(function (data) {
+                    console.log(data);
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
+                });     
+    });
 });
 
 /********************** Extras **********************/
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var location = {lat: 51.3907601126576,lng: 5.5054273920690315};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
@@ -280,7 +327,7 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = {lat: 51.3907601126576, lng: 5.5054273920690315};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,

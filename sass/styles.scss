@@ -252,7 +252,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/fontaineb.png') center center;
+  background: url('../img/Scala_Gala_by_Sai_33-2.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -378,6 +378,22 @@ Social share buttons
 .share-bar {
   margin-top: 20px;
 }
+
+/* Alert wrapper*/
+#alert-wrapper {
+    position: fixed; /* Fix it to the viewport */
+    top: 20px; /* Adjust to appear near the top of the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    z-index: 9999; /* Ensure it appears above other elements */
+    background-color: #f8d7da; /* Example background for danger alert */
+    color: #721c24; /* Example text color for danger alert */
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 
 /* ==========================================================================
 Intro
@@ -821,7 +837,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-key {
+      i.fa-user, i.fa-user-plus, i.fa-envelope, .fa-key, .fa-cutlery, .fa-clock-o {
         font-size: 14px;
         position: absolute;
         top: 50%;
@@ -849,9 +865,123 @@ RSVP form
       input:-ms-input-placeholder {
         color: $form-placeholder;
       }
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      border: solid 1px $keyline-color;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    
+      input[type="radio"] {
+        appearance: none; /* Remove default radio button styling */
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        border: 2px solid $keyline-color;
+        border-radius: 50%;
+        background-color: #fff;
+        box-sizing: border-box;
+        flex-shrink: 0;        /* 👈 prevent flex stretching */
+        margin-right: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    
+        &:checked {
+          background-color: $accent-color; /* Accent color for checked state */
+          border-color: $accent-color;
+        }
+      }
+    
+      &:hover {
+        background-color: lighten($keyline-color, 40%);
+      }
+      
     }
   }
+  /* Style for RSVP radio buttons */
+.rsvp .row {
+  margin-bottom: 20px; /* Add spacing between rows */
 }
+}
+
+/* ==========================================================================
+Invite-form style
+========================================================================== */
+#invite-form {
+  max-width: 400px;
+  margin:0 auto;
+  text-align: center;
+  .form-input-group {
+    width: 100%;
+    height: 55px;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+    border: solid 1px $keyline-color;
+    text-align: left;
+    position: relative;
+
+    i {
+      color: $accent-color;
+      font-size: 14px;
+    }
+    i:after {
+      content: "";
+      height: 30px;
+      width: 1px;
+      border-right: solid 1px $keyline-color;
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+    }
+    i.fa-key {
+      font-size: 14px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 20px;
+    }
+    input {
+      padding-left: 68px;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      border: none;
+    }
+    input::-webkit-input-placeholder {
+      color: $form-placeholder;
+    }
+    input:-moz-placeholder {
+      color: $form-placeholder;
+    }
+    input::-moz-placeholder {
+      color: $form-placeholder;
+    }
+    input:-ms-input-placeholder {
+      color: $form-placeholder;
+    }
+  }
+
+  .btn {
+    padding: 15px 0;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 13px;
+    background-color: $accent-color;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+
+}
+
 
 /* ==========================================================================
 Footer

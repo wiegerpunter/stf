@@ -18,9 +18,9 @@
     <meta property="og:description" content="Wij willen jullie graag uitnodigen voor deze dag.">
     <!-- <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg"> -->
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/mw-125.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/mw-125.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/mw-125.png">
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
@@ -67,14 +67,17 @@
 <![endif]-->
 <section class="hero">
     <div class="container text-center">
-        <img src="img/logomw.png" alt="Meike & Wieger">
+        <img src="img/logo-mw-small.png">
 
         <div class="invite-box">
             <h3>Meike & Wieger gaan trouwen</h3>
             <p>Vul je uitnodigingscode in</p>
 
             <form id="invite-form">
-                <input type="text" id="invite_code" placeholder="Uitnodigingscode" required>
+                <div class="form-input-group">
+                    <i class="fa fa-key"></i>
+                    <input type="text" id="invite_code" placeholder="Uitnodigingscode" required>
+                </div>
                 <button class="btn btn-accent">Bekijk uitnodiging</button>
             </form>
             <div class="row"> <div class="col-md-6" id="alert-wrapper"></div> </div>
@@ -90,7 +93,14 @@
     <!-- Intro -->
     <section id="intro-daggast" class="#intro section-padding text-center">
         <h3>Uitnodiging</h3>
-        <p>Je bent de hele dag welkom ❤️</p>
+        <div><p>Wij kijken ernaar uit om deze dag onze toekomst met jou te vieren.<br>
+            Het wordt een vrolijke dag vol muziek, gezelligheid en liefde.<br>
+            Laat je hieronder even weten of je erbij bent?</p>
+
+            <p>Je bent de hele dag welkom ❤️ <br>
+            Liefs, Meike Heldoorn & Wieger Punter</p>
+        
+        </div>
     </section>
 
     <!-- Events (full program) -->
@@ -107,30 +117,30 @@
                         <p><strong>Overdag</strong></p>
     
                         <h5>Inloop <span class="time">14:00 - 15:00</span></h5>
-                        <p>Koffie en thee leuten.</p>
+                        <!-- <p>Koffie & thee</p> -->
                     </div>
                     <div class="wp5">
                         <h5>Ceremonie <span class="time">15:00 - 16:00</span></h5>
-                        <p>Janken</p>
+                        <!-- <p>Janken</p> -->
                     </div>
                     <div class="wp5">
                         <h5>Borrel & Diner <span class="time">16:00 - 19:30</span></h5>
-                        <p>Biertje</p>
+                        <!-- <p>Biertje</p> -->
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                     <div class="wp4">
                         <p><strong>Avond</strong></p>
                             <h5>Inloop Feest <span class="time">20:00</span></h5>
-                            <p>Welkom aan de avondgasten</p>
+                            <!-- <p>Welkom aan de avondgasten</p> -->
                         </div>
                     <div class="wp5">
                         <h5>Opening <span class="time">20:30 - 20:45</span></h5>
-                        <p>Verrassing</p>
+                        <!-- <p>Verrassing</p> -->
                     </div>
                     <div class="wp5">
                         <h5>Feest <span class="time">20:45 - 1:00</span></h5>
-                        <p>Feessieee. met band en DJ</p>
+                        <!-- <p>Feessieee. met band en DJ</p> -->
                     </div>
                 </div>
             </div>
@@ -171,8 +181,15 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h3>Praktische Info</h3>
-                    <p>Stel je vragen over de dag, of over het geven van een stukje aan onze ceremoniemeesters Mieke & Margot.
+                    <p>Wij hebben al huisraad genoeg, maar nog veel leuke plannen voor de boeg.<br>
+                        Mocht je een verrassing overwegen, hopen wij op een bijdrage voor onze huwelijksreis naar Noorwegen.</p>
+                    <p> Wij vieren de liefde en het leven tijdens deze gebeurtenis, dus serveren wij alleen eten zonder vlees of vis.
                     </p>
+                    <h5>Ceremoniemeesters</h5>
+                    <p>Stel je vragen over de dag, of over het geven van een stukje aan onze
+                        ceremoniemeesters Mieke & Margot.</p>
+                    <h5>Verder nog</h5>
+                    <p> Wij hebben jou en je eventuele partner er graag bij, maar vragen je om de kinderen thuis te laten.</p>
                 </div>
             </div>
             <!-- <div class="row section-border wp7">
@@ -193,8 +210,8 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                         </button>
                         <div class="section-padding">
-                            <h3>Thank you!</h3>
-                            <p>We are glad to see you join us on our big day.</p>
+                            <h3>Dankjewel!</h3>
+                            <p>Wij kijken er naar uit om deze dag met je te vieren.</p>
                             <div id="add-to-cal"></div>
                         </div>
                     </div>
@@ -206,21 +223,13 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <p>Wij horen graag of je erbij bent voor 1 April 2026.
-                        Wij hebben jou en je eventuele partner er graag bij, maar niet genoeg ruimte voor kinderen.
-                        Al het eten dat geserveerd wordt, is vegetarisch.
                     </p>
                     <form id="rsvp-form" class="rsvp-form"
                           action=""
                           method="POST">
                           <input type="hidden" name="guest_type" value="daggast">
                         <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                         placeholder="Email"
-                                                                         required>
-                                </div>
-                            </div>
+                            
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-user"></i><input name="name" class=""
@@ -228,40 +237,69 @@
                                                                      required>
                                 </div>
                             </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-cutlery"></i><input type="name" name="allergies"
+                                                                    class=""
+                                                                    placeholder="Allergieen / dieetwensen"
+                                                                    >
+                                                                    <!-- todo: dropdown en overige menu? -->
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                      max="4"
-                                                                      placeholder="Partner (geen kinderen)"
+                                    <i class="fa fa-user-plus"></i><input type="name" name="extras" class=""
+                                                                      placeholder="Naam partner"
                                                                       required>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                    class="" min="0"
-                                                                    placeholder="Uitnodigings code"
-                                                                    required>
+                                    <i class="fa fa-cutlery"></i><input type="name" name="allergies-partner"
+                                                                    class=""
+                                                                    placeholder="Partner: Allergieen / dieetwensen"
+                                                                    >
+                                                                    <!-- todo: dropdown en overige menu? -->
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-key"></i><input type="number" name="Allergieen / dieetwensen" id="allergies"
-                                                                    class="" min="0"
-                                                                    placeholder=""
-                                                                    required>
-                                                                    <!-- todo: dropdown en overige menu? -->
+                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                         placeholder="Email"
+                                                                         required>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p>Ben je de hele dag én avond aanwezig, of alleen een deel?</p>
+                        
+                            <div class="col-md-4 col-sm-4">
+                                <label class="form-input-group">
+                                    <input type="radio" name="dagnacht" id="hele_dag" value="hele_dag_en_avond" required>
+                                    <label for="hele_dag" font-weight: normal>Overdag en 's avonds.</label>
+                                </label>
+                            </div>
+                        
+                            <div class="col-md-4 col-sm-4">
+                                <label class="form-input-group">
+                                    <input type="radio" name="dagnacht" id="alleen_overdag" value="alleen_overdag">
+                                    <label for="alleen_overdag" font-weight: normal>Alleen overdag.</label>
+                                </label>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <label class="form-input-group">
+                                    <input type="radio" name="dagnacht" id="alleen_avond" value="alleen_avond">
+                                    <label for="alleen_avond" font-weight: normal>Alleen 's avonds.</label>
+                                </label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12" id="alert-wrapper"></div>
                         </div>
                         <button class="btn-fill rsvp-btn">
-                            Yes,
-                            that's me!
+                            Alles ingevuld? Verstuur mijn antwoord!
                         </button>
                     </form>
                 </div>
@@ -287,8 +325,7 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="wp4"><p><strong>Overdag</strong></p></div>
-                <p>Overdag houden wij een ceremonie en een diner.</p>
+                <p>Wij hebben jou er graag 's avonds bij.Overdag houden wij een ceremonie en een diner.</p>
             </div>
             <div class="row text-center">
                 <div class="wp4">
@@ -297,11 +334,10 @@
                     </div>
                 <div class="wp5">
                     <h5>Opening <span class="time">20:30 - 20:45</span></h5>
-                    <p>Verrassing</p>
+                    <!-- <p>Verrassing</p> -->
                 </div>
                 <div class="wp5">
                     <h5>Feest <span class="time">20:45 - 1:00</span></h5>
-                    <p>Feessieee. met band en DJ</p>
                 </div>
             </div>
             </div>
@@ -342,8 +378,16 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h3>Praktische Info</h3>
-                    <p>Stel je vragen over de dag, of over het geven van een stukje aan onze ceremoniemeesters Mieke & Margot.
+                    <p>Wij hebben al huisraad genoeg, maar nog veel leuke plannen voor de boeg.<br>
+                        Mocht je een verrassing overwegen, hopen wij op een bijdrage voor onze huwelijksreis naar Noorwegen.</p>
+                    <p> Wij vieren de liefde en het leven tijdens deze gebeurtenis, dus serveren wij alleen eten zonder vlees of vis.
                     </p>
+                    <h5>Ceremoniemeesters</h5>
+                    <p>Stel je vragen over het feest aan onze
+                        ceremoniemeesters Mieke & Margot.</p>
+                    <h5>Verder nog</h5>
+                    <p> Wij hebben jou en je eventuele partner er graag bij, maar vragen je om de kinderen thuis te laten.</p>
+                </div>
                 </div>
             </div>
             <!-- <div class="row section-border wp7">
@@ -357,16 +401,17 @@
     <!-- RSVP daggast -->
     <section class="rsvp text-center" id="rsvp-avondgast">
 
-        <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        
+        <div id="rsvp-modal-avond" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                         </button>
                         <div class="section-padding">
-                            <h3>Thank you!</h3>
-                            <p>We are glad to see you join us on our big day.</p>
-                            <div id="add-to-cal"></div>
+                            <h3>Dankjewel!</h3>
+                            <p>Wij kijken er naar uit om deze dag met je te vieren.</p>
+                            <div id="add-to-cal-avond"></div>
                         </div>
                     </div>
                 </div><!-- /.modal-content -->
@@ -377,14 +422,12 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <p>Wij horen graag of je erbij bent voor 1 April 2026.
-                        Wij hebben jou en je eventuele partner er graag bij, maar niet genoeg ruimte voor kinderen.
-                        Al het eten dat geserveerd wordt, is vegetarisch.
                     </p>
-                    <form id="rsvp-form" class="rsvp-form"
+                    <form id="rsvp-form-avondgast" class="rsvp-form"
                           action=""
                           method="POST">
                           <input type="hidden" name="guest_type" value="avondgast">
-                        <div class="row">
+                          <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-envelope"></i><input type="email" name="email" class=""
@@ -392,6 +435,9 @@
                                                                          required>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
+                            
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-user"></i><input name="name" class=""
@@ -399,40 +445,25 @@
                                                                      required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
+                            
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                      max="4"
-                                                                      placeholder="Partner (geen kinderen)"
+                                    <i class="fa fa-user-plus"></i><input type="name" name="extras" class=""
+                                                                      placeholder="Naam partner"
                                                                       required>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                    class="" min="0"
-                                                                    placeholder="Uitnodigings code"
-                                                                    required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-key"></i><input type="number" name="Allergieen / dieetwensen" id="allergies"
-                                                                    class="" min="0"
-                                                                    placeholder=""
-                                                                    required>
-                                                                    <!-- todo: dropdown en overige menu? -->
-                                </div>
-                            </div>
+
                         </div>
+                        
+                        <input type="hidden" name="allergies" value="Geen">
+                        <input type="hidden" name="allergies-partner" value="Geen">
+                        <input type="hidden" name="dagnacht" value="alleen_avond">
                         <div class="row">
                             <div class="col-md-12" id="alert-wrapper"></div>
                         </div>
                         <button class="btn-fill rsvp-btn">
-                            Yes,
-                            that's me!
+                            Alles ingevuld? Verstuur mijn antwoord!
                         </button>
                     </form>
                 </div>
@@ -576,14 +607,14 @@
                 <div class="col-xs-12 section-border section-padding"></div>
             </div>
         </div>
-        <!--<div class="row">
+        <div class="row">
             <div class="col-md-12">
                 <div class="diamond floating-logo">
-                    <img src="img/sketch-logo.png" alt="Sketch Logo">
+                    <img src="img/mw-500.png" alt="Sketch Logo">
                     <div class="ring"></div>
                 </div>
             </div>
-        </div>-->
+        </div>
     </section>
 </section>
 
