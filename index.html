@@ -65,7 +65,47 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
+
+
 <section class="hero">
+    <header>
+        <div class="header-content" id="header-daggast">
+            <div class="logo"><a href="#"><img src="img/mw_500.png" alt="Logo"></a></div>
+            <div class="header-nav">
+                <nav>
+                    <ul class="primary-nav">
+                        <li><a href="#intro-daggast">Uitnodiging</a></li>
+                        <li><a href="#events-daggast">Programma</a></li>
+                        <li><a href="#eng-pics">Galerij</a></li>
+                    </ul>
+                    <ul class="member-actions">
+                        <li><a href="#rsvp-daggast" class="btn-white btn-small">RSVP</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navicon">
+                <a class="nav-toggle" href="#"><span></span></a>
+            </div>
+        </div>
+        <div class="header-content" id="header-avondgast">
+            <div class="logo"><a href="#"><img src="img/mw_500.png" alt="Logo"></a></div>
+            <div class="header-nav">
+                <nav>
+                    <ul class="primary-nav">
+                        <li><a href="#intro-avondgast">Uitnodiging</a></li>
+                        <li><a href="#events-avondgast">Programma</a></li>
+                        <li><a href="#eng-pics-avond">Galerij</a></li>
+                    </ul>
+                    <ul class="member-actions">
+                        <li><a href="#rsvp-avondgast" class="btn-white btn-small">RSVP</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navicon">
+                <a class="nav-toggle" href="#"><span></span></a>
+            </div>
+        </div>
+    </header>
     <div class="container text-center">
         <img src="img/logo-mw-small.png">
 
@@ -80,7 +120,9 @@
                 </div>
                 <button class="btn btn-accent">Bekijk uitnodiging</button>
             </form>
-            <div class="row"> <div class="col-md-6" id="alert-wrapper"></div> </div>
+            <div class="row">
+                <div class="col-md-12"  id="alert-wrapper-invite">
+                </div> </div>
             <!-- <div id="error-message" style="color:red; display:none;">
                 Ongeldige uitnodigingscode. Probeer opnieuw.
             </div> -->
@@ -101,13 +143,26 @@
             Liefs, Meike Heldoorn & Wieger Punter</p>
         
         </div>
+        <div class="row">
+            <div class="col-md-12 text-center" >
+                <h4>Locatie</h4>
+                <p>
+                
+                </a><a href="https://maps.app.goo.gl/iSoiyddQaawVXN6j9" target="_blank" rel="noopener noreferrer">
+                    De Hut van Mie Pils</a><br>
+                    Leenderweg 1, 5583 TC Waalre</p>
+                </br>
+            </div>
+        </div>
     </section>
+    
 
     <!-- Events (full program) -->
     <section class="events section-padding" id="events-daggast">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+            
+            <div class="row text-center">
+                <div class="col-md-12" text-center>
                     <h3 class="header">Bruiloft Programma</h3>
                 </div>
             </div>
@@ -173,14 +228,97 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-    
     </section>
 
+    <section id="eng-pics" class="eng-pics section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="header">Galerij</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/champ.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/champ.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/engage.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/engage.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/kerstdiner.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/kerstdiner.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/gala.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/gala.jpg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/hardang.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/hardang.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/kamp.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/kamp.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row hidden-lg hidden-md hidden-xs">
+                <div class="col-xs-12 section-border section-padding"></div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <div class="diamond floating-logo">
+                    <img src="img/mw-500.png" alt="Sketch Logo">
+                    <div class="ring"></div>
+                </div>
+            </div>
+        </div> -->
+    </section>
     <section id="praktisch-daggast" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h3>Praktische Info</h3>
+                    <h3>Informatie</h3>
                     <p>Wij hebben al huisraad genoeg, maar nog veel leuke plannen voor de boeg.<br>
                         Mocht je een verrassing overwegen, hopen wij op een bijdrage voor onze huwelijksreis naar Noorwegen.</p>
                     <p> Wij vieren de liefde en het leven tijdens deze gebeurtenis, dus serveren wij alleen eten zonder vlees of vis.
@@ -222,6 +360,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
+                    <h3>RSVP Daggast</h3>
                     <p>Wij horen graag of je erbij bent voor 1 April 2026.
                     </p>
                     <form id="rsvp-form" class="rsvp-form"
@@ -296,7 +435,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12" id="alert-wrapper"></div>
+                            <div class="col-md-12" id="alert-wrapper-dag"></div>
                         </div>
                         <button class="btn-fill rsvp-btn">
                             Alles ingevuld? Verstuur mijn antwoord!
@@ -314,6 +453,17 @@
     <section id="intro-avondgast" class="#intro section-padding text-center">
         <h3>Uitnodiging</h3>
         <p>We zien je graag bij het avondfeest 🎉</p>
+        <div class="row">
+            <div class="col-md-12 text-center" >
+                <h4>Locatie</h4>
+                <p>
+                
+                </a><a href="https://maps.app.goo.gl/iSoiyddQaawVXN6j9" target="_blank" rel="noopener noreferrer">
+                    De Hut van Mie Pils</a><br>
+                    Leenderweg 1, 5583 TC Waalre</p>
+                </br>
+            </div>
+        </div>
     </section>
 
     <!-- Events (full program) -->
@@ -330,8 +480,12 @@
             <div class="row text-center">
                 <div class="wp4">
                     <p><strong>Avond</strong></p>
-                    <p>Vanaf 20:00 ben je welkom voor het feest.</p>
                     </div>
+                <div class="wp5">
+                <h5>Inloop Feest <span class="time">20:00 - 20:45</span></h5>
+                <p>Vanaf 20:00 ben je welkom voor het feest!</p>
+                    <!-- <p>Verrassing</p> -->
+                </div>
                 <div class="wp5">
                     <h5>Opening <span class="time">20:30 - 20:45</span></h5>
                     <!-- <p>Verrassing</p> -->
@@ -372,12 +526,96 @@
         </div><!-- /.modal -->
     
     </section>
+    <section id="eng-pics-avond" class="eng-pics section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="header">Galerij</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/champ.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/champ.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/engage.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/engage.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/kerstdiner.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/kerstdiner.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/gala.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/gala.jpg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/hardang.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/hardang.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="fancybox" rel="group" href="img/eng_pics/kamp.jpeg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/kamp.jpeg" alt=""/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row hidden-lg hidden-md hidden-xs">
+                <div class="col-xs-12 section-border section-padding"></div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <div class="diamond floating-logo">
+                    <img src="img/mw-500.png" alt="Sketch Logo">
+                    <div class="ring"></div>
+                </div>
+            </div>
+        </div> -->
+    </section>
 
     <section id="praktisch-avondgast" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h3>Praktische Info</h3>
+                    <h3>Informatie</h3>
                     <p>Wij hebben al huisraad genoeg, maar nog veel leuke plannen voor de boeg.<br>
                         Mocht je een verrassing overwegen, hopen wij op een bijdrage voor onze huwelijksreis naar Noorwegen.</p>
                     <p> Wij vieren de liefde en het leven tijdens deze gebeurtenis, dus serveren wij alleen eten zonder vlees of vis.
@@ -421,21 +659,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
+                    <h3>RSVP Avondgast</h3>
                     <p>Wij horen graag of je erbij bent voor 1 April 2026.
                     </p>
                     <form id="rsvp-form-avondgast" class="rsvp-form"
                           action=""
                           method="POST">
                           <input type="hidden" name="guest_type" value="avondgast">
-                          <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                         placeholder="Email"
-                                                                         required>
-                                </div>
-                            </div>
-                        </div>
+                          
                         <div class="row">
                             
                             <div class="col-md-6 col-sm-6">
@@ -455,12 +686,21 @@
                             </div>
 
                         </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                         placeholder="Email"
+                                                                         required>
+                                </div>
+                            </div>
+                        </div>
                         
                         <input type="hidden" name="allergies" value="Geen">
                         <input type="hidden" name="allergies-partner" value="Geen">
                         <input type="hidden" name="dagnacht" value="alleen_avond">
                         <div class="row">
-                            <div class="col-md-12" id="alert-wrapper"></div>
+                            <div class="col-md-12" id="alert-wrapper-avond"></div>
                         </div>
                         <button class="btn-fill rsvp-btn">
                             Alles ingevuld? Verstuur mijn antwoord!
@@ -475,7 +715,7 @@
 
 <section id="common-content" style="display: none;">
     <!-- Map -->
-    <section id="map" class="section-padding">
+    <!-- <section id="map" class="section-padding">
         <div class="text-center">
             <h3>Hoe kom ik er?</h3>
         </div>
@@ -499,7 +739,7 @@
                                 <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
                                     <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+91 7123456789</a></p>
                             </div> -->
-                        </div>
+                        <!-- </div> -->
                         <!-- <div class="row text-center">
                             <div class="col-md-6" style="padding: 5px;">
                                 <a class="btn btn-fill btn-small"
@@ -511,114 +751,33 @@
                                     map</a>
                             </div>
                         </div> -->
-                    </div>
+                    <!-- </div>
                 </div>
             </div>
+
+            
         </div>
-    </section>
+    </section> -->
 
     <!-- Background sections -->
-    <section id="intro">
+    <!-- <section id="intro">
         <!-- ontmoeting -->
-    </section>
+    <!-- </section> -->
 
-    <section id="video-bg" class="hidden-sm hidden-xl">
+    <!-- <section id="video-bg" class="hidden-sm hidden-xl">
         <div id="bgndVideo" class="player"
             data-property="{videoURL:'https://www.youtube.com/watch?v=lodO63FKtjg',
-            containment:'#video-bg',autoPlay:true,
-             mute:true, showControls:false,
-              startAt:80, stopAt:259, opacity:1}">
+            containment:'#video-bg',autoPlay:false,
+             mute:false, showControls:false,
+              startAt:0, stopAt:259, opacity:1}">
         </div>
-        <!-- <div id="video-content">
+       <div id="video-content">
             <h5>Filmpie</h5>
             <p>onderschrift</p>
         </div> -->
-    </section>
+    </section> 
 
-    <section id="eng-pics" class="section-padding">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3 class="header">Galerij</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/_RFX2942-sm.jpg" alt=""/>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-2">
-                    <a class="fancybox" rel="group" href="img/eng_pics/IMG_3483-lg.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/IMG_3483-sm.jpg" alt=""/>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-2">
-                    <a class="fancybox" rel="group" href="img/eng_pics/_RFX2992-lg.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/_RFX2992-sm.jpg" alt=""/>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-2">
-                    <a class="fancybox" rel="group" href="img/eng_pics/_RFX3064-lg.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/_RFX3064-sm.jpg" alt=""/>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-2">
-                    <a class="fancybox" rel="group" href="img/eng_pics/NGP_4089-lg.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/NGP_4089-sm.jpg" alt=""/>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-2">
-                    <a class="fancybox" rel="group" href="img/eng_pics/NGP_4119-lg.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/NGP_4119-sm.jpg" alt=""/>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row hidden-lg hidden-md hidden-xs">
-                <div class="col-xs-12 section-border section-padding"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="diamond floating-logo">
-                    <img src="img/mw-500.png" alt="Sketch Logo">
-                    <div class="ring"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 </section>
 
 <footer>

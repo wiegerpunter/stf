@@ -243,23 +243,32 @@ $(document).ready(function () {
 
 
     /************** Day and Evening guest separation ************/
-    
+    $(document).ready(function () {
+        $("#header-daggast").hide();
+        $("#header-avondgast").hide();
+    });
     $('#invite-form').on('submit', function (e) {
         
         e.preventDefault();
+        $("#header-daggast").hide();
+        $("#header-avondgast").hide();
+
         $("#daggast").hide();
         $("#avondgast").hide();
         $("#error-message").hide();
         $("#common-content").hide();
     
         if (MD5($('#invite_code').val()) == 'b4683fef34f6bb7234f2603699bd0ded') {
+            $("#header-daggast").show();
+
             $('#daggast').show();
             $('#common-content').show();
         } else if (MD5($('#invite_code').val()) == 'd15a4abc1597185612e1a3ec4d9ecb87') {
+            $("#header-avondgast").show();
             $('#avondgast').show();
             $('#common-content').show();
         } else {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> De invite code is niet correct.'));
+            $('#alert-wrapper-invite').html(alert_markup('danger', '<strong>Sorry!</strong> De invite code is niet correct.'));
         }
     });
 
@@ -268,21 +277,21 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
+        $('#alert-wrapper-dag').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
         $.post('https://script.google.com/macros/s/AKfycbxMhIiLyqulst-iMcJ4zVtqB3zhDGf40QqEAAKr6AawfuFh0CflB5U1MbwBTzNAYbPj1g/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
+                        $('#alert-wrapper-dag').html(alert_markup('danger', data.message));
                     } else {
-                        $('#alert-wrapper').html('');
+                        $('#alert-wrapper-dag').html('');
                         $('#rsvp-modal').modal('show');
                     }
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
+                    $('#alert-wrapper-dag').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
                 });
     });
     
@@ -290,21 +299,21 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
+        $('#alert-wrapper-avond').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
         $.post('https://script.google.com/macros/s/AKfycbxMhIiLyqulst-iMcJ4zVtqB3zhDGf40QqEAAKr6AawfuFh0CflB5U1MbwBTzNAYbPj1g/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
+                        $('#alert-wrapper-avond').html(alert_markup('danger', data.message));
                     } else {
-                        $('#alert-wrapper').html('');
+                        $('#alert-wrapper-avond').html('');
                         $('#rsvp-modal-avond').modal('show');
                     }
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
+                    $('#alert-wrapper-avond').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
                 });     
     });
 });
