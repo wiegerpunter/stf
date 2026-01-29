@@ -421,9 +421,22 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p>Ben je de hele dag én avond aanwezig, of alleen een deel?</p>
-                            <!-- change into selection, default: all selected.-->
-                            <div class="col-md-4 col-sm-4">
+                            <div class="row">
+                                <p>Ben je de hele dag én avond aanwezig, of alleen een deel?</p>
+                                    <p>Selecteer een of meerdere opties:</p>
+                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" name="aanwezig_overdag" id="overdag" value="overdag" class="form-check-input" checked>
+                                        <label for="aanwezig_overdag" class="form-check-label">Ceremonie en borrel (14:00-18:00)</label>
+                    
+                                        <input type="checkbox" name="aanwezig_diner" id="diner" value="diner" class="form-check-input" checked>
+                                        <label for="aanwezig_diner" class="form-check-label">Diner (18:00-19:30)</label>
+                                    
+                                        <input type="checkbox" name="aanwezig_feest" id="feest" value="feest" class="form-check-input" checked>
+                                        <label for="aanwezig_feest" class="form-check-label">Feest (20:00 - 1:00)</label>
+                                    </div>
+                            </div>
+                            <!-- <div class="col-md-4 col-sm-4">
                                 <label class="form-input-group">
                                     <input type="radio" name="dagnacht" id="hele_dag" value="hele_dag_en_avond" required>
                                     <label for="hele_dag" font-weight: normal>Overdag en 's avonds.</label>
@@ -446,7 +459,7 @@
                                     <input type="radio" name="dagnacht" id="alleen_avond" value="alleen_avond">
                                     <label for="alleen_avond" font-weight: normal>Alleen feest (na diner).</label>
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="row">
                             <div class="col-md-12" id="alert-wrapper-dag"></div>

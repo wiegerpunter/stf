@@ -919,6 +919,8 @@ RSVP form
       &:hover {
         background-color: lighten($keyline-color, 40%);
       }
+
+      
       
     }
   }
@@ -926,6 +928,48 @@ RSVP form
 .rsvp .row {
   margin-bottom: 20px; /* Add spacing between rows */
 }
+.form-check-group {
+  display: flex; /* Use Flexbox to align items horizontally */
+  gap: 20px; /* Add spacing between the checkboxes */
+  flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
+  margin-top: 10px; /* Add spacing above the group */
+}
+.form-check {/* Vertically center the checkbox and label */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px; /* Add spacing between the checkbox and the label */
+  cursor: pointer;
+
+  &:checked {
+      background-color: $accent-color; /* Change background color when selected */
+      border-color: $accent-color; /* Change border color when selected */
+  }
+
+  &:focus {
+      outline: none; /* Remove default focus outline */
+      box-shadow: 0 0 0 2px lighten($accent-color, 20%); /* Add a subtle focus effect */
+  }
+}
+
+.form-check-label {
+  font-size: $font-size-h5;
+  color: $txt-primary; /* Adjust text color */
+  cursor: pointer;
+  font-weight: normal; /* Ensure the text is not bold */
+  flex: 1; /* Allow the label to take up remaining space */
+}
+// .form-label {
+//   font-weight: normal;
+//   font-size: $font-size-p;
+//   line-height: $base-line-height;
+//   color: $txt-primary;
+// }
 }
 
 /* ==========================================================================
