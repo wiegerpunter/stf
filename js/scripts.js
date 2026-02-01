@@ -281,7 +281,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper-dag').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbxMhIiLyqulst-iMcJ4zVtqB3zhDGf40QqEAAKr6AawfuFh0CflB5U1MbwBTzNAYbPj1g/exec', data)    
+        $.post('https://script.google.com/macros/s/AKfycbynOjCOaIFR94QG4-oRMAbA8PN_d5Rjazsu6Y4CmPPkiNWxA-huGQt7_leWvQTTA4qnrA/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -303,7 +303,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper-avond').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbxMhIiLyqulst-iMcJ4zVtqB3zhDGf40QqEAAKr6AawfuFh0CflB5U1MbwBTzNAYbPj1g/exec', data)    
+        $.post('https://script.google.com/macros/s/AKfycbynOjCOaIFR94QG4-oRMAbA8PN_d5Rjazsu6Y4CmPPkiNWxA-huGQt7_leWvQTTA4qnrA/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
