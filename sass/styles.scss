@@ -933,17 +933,22 @@ RSVP form
   gap: 20px; /* Add spacing between the checkboxes */
   flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
   margin-top: 10px; /* Add spacing above the group */
+  justify-content: space-between;
 }
 .form-check {/* Vertically center the checkbox and label */
   display: flex;
-  align-items: center;
-  gap: 5px;
+  align-items: left;
+  gap: 10px;
+  flex: 1 1 calc(33.33% - 20px); /* Default to one-third width */
+  min-width:200px; /* Ensure a minimum width for smaller screens */
+  max-width: 300px;
 }
 
 .form-check-input {
   width: 18px;
   height: 18px;
-  margin-right: 10px; /* Add spacing between the checkbox and the label */
+  margin-right: 15px; /* Add spacing between the checkbox and the label */
+  margin-left: 15px;
   cursor: pointer;
 
   &:checked {
@@ -963,6 +968,13 @@ RSVP form
   cursor: pointer;
   font-weight: normal; /* Ensure the text is not bold */
   flex: 1; /* Allow the label to take up remaining space */
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .form-check-item {
+      flex: 1 1 90%; /* Make each item take up the full width */
+  }
 }
 // .form-label {
 //   font-weight: normal;
