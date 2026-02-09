@@ -264,7 +264,7 @@ $(document).ready(function () {
 
             $('#daggast').show();
             $('#common-content').show();
-        } else if (MD5($('#invite_code').val()) == 'd15a4abc1597185612e1a3ec4d9ecb87') {
+        } else if (MD5($('#invite_code').val()) == '605c34080d4bd86446422c60f4247dad') {
             $('#alert-wrapper-invite').hide();
             $("#header-avondgast").show();
             $('#avondgast').show();

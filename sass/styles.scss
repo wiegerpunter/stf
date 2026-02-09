@@ -690,7 +690,11 @@ Instagram
 /* ==========================================================================
 Engagement Pics
 ========================================================================== */
-.eng-pics {
+.eng-pics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 40px; /* Add spacing between images */
+  margin-top: 20px; /* Add spacing above the gallery */
   img {
     width: 100%;
     height: auto;
@@ -703,6 +707,9 @@ Engagement Pics
     position: relative;
     overflow: hidden;
     border-radius: 4px;
+    width: 100%; /* Ensure the container takes up the full width */
+    aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio for all images */
+    background-color: #f0f0f0; /* Add a placeholder background color */
   }
   .img-wrap .overlay {
     position: absolute;
