@@ -251,14 +251,16 @@ Navigation
 Hero
 ========================================================================== */
 .hero {
-  min-height: 1500px;
-  background: url('../img/huashan.jpg') center center;
+  min-height: 1000px;
+  background: url('../img/fbleau2.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
-
+  @media (max-width: 768px) {
+    background-position:35% center; /* Adjust the position for mobile */
+  }
   /*.rsvp-btn {
     position: absolute;
     bottom: 100px;
