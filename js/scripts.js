@@ -185,7 +185,7 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Meike & Wieger's bruiloft",
+            title: "Meike en Wieger's bruiloft",
 
             // Event start date
             start: new Date('April 25, 2026 14:00'),
@@ -215,7 +215,7 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Meike & Wieger's bruiloft",
+            title: "Meike en Wieger's bruiloft",
 
             // Event start date
             start: new Date('April 25, 2026 20:00'),
