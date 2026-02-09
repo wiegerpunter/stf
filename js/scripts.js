@@ -258,13 +258,15 @@ $(document).ready(function () {
         $("#error-message").hide();
         $("#common-content").hide();
     
-        if (MD5($('#invite_code').val()) == 'b4683fef34f6bb7234f2603699bd0ded') {
+        if (MD5($('#invite_code').val()) == 'b4683fef34f6bb7234f2603699bd0ded' ||
+            MD5($('#invite_code').val()) == 'b63a50d5deb3bb2e30575af41ece9bc3') {
             $('#alert-wrapper-invite').hide();
             $("#header-daggast").show();
 
             $('#daggast').show();
             $('#common-content').show();
-        } else if (MD5($('#invite_code').val()) == '605c34080d4bd86446422c60f4247dad') {
+        } else if (MD5($('#invite_code').val()) == '605c34080d4bd86446422c60f4247dad' ||
+                   MD5($('#invite_code').val()) == 'd111567a751383ff129749d92c48cfae') {
             $('#alert-wrapper-invite').hide();
             $("#header-avondgast").show();
             $('#avondgast').show();
