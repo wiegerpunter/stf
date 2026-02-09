@@ -270,7 +270,8 @@ $(document).ready(function () {
             $('#avondgast').show();
             $('#common-content').show();
         } else {
-            $('#alert-wrapper-invite').html(alert_markup('danger', '<strong>Sorry!</strong> De invite code is niet correct.'));
+            $('#alert-wrapper-invite').show();
+            $('#alert-wrapper-invite').html(alert_markup('danger', '<strong>Sorry!</strong> De uitnodigingscode is niet correct.'));
         }
     });
 
@@ -281,7 +282,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper-dag').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbynOjCOaIFR94QG4-oRMAbA8PN_d5Rjazsu6Y4CmPPkiNWxA-huGQt7_leWvQTTA4qnrA/exec', data)    
+        $.post('https://script.google.com/macros/s/AKfycbwNR7LudfdB1MNbkyylet7gtK7Sheof0rLJ-7thoEnbl8GfvzoD-sSlfQZCpK5DVzd2qA/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -291,10 +292,10 @@ $(document).ready(function () {
                         $('#rsvp-modal').modal('show');
                     }
                 })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper-dag').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
-                });
+                // .fail(function (data) {
+                //     console.log(data);
+                //     $('#alert-wrapper-dag').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
+                // });
     });
     
     $('#rsvp-form-avondgast').on('submit', function (e) {
@@ -303,7 +304,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper-avond').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbynOjCOaIFR94QG4-oRMAbA8PN_d5Rjazsu6Y4CmPPkiNWxA-huGQt7_leWvQTTA4qnrA/exec', data)    
+        $.post('https://script.google.com/macros/s/AKfycbwNR7LudfdB1MNbkyylet7gtK7Sheof0rLJ-7thoEnbl8GfvzoD-sSlfQZCpK5DVzd2qA/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -313,10 +314,10 @@ $(document).ready(function () {
                         $('#rsvp-modal-avond').modal('show');
                     }
                 })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper-avond').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
-                });     
+                // .fail(function (data) {
+                //     console.log(data);
+                //     $('#alert-wrapper-avond').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
+                // });     
     });
 });
 
