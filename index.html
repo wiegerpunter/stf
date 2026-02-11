@@ -415,6 +415,12 @@
                                         <label for="aanwezig_feest" class="form-check-label">Feest (20:00 - 1:00)</label>
                                         </div>
                                     </div>
+                                    <div class="form-check-group"-group>
+                                        <div class="form-check">
+                                        <input type="checkbox" name="niet_aanwezig" id="niet_aanwezig" value="niet_aanwezig" class="form-check-input">
+                                        <label for="niet_aanwezig" class="form-check-label">Ik kan er helaas niet bij zijn.</label>
+                                        </div>
+                                    </div>
                             </div>
                             <!-- <div class="col-md-4 col-sm-4">
                                 <label class="form-input-group">
@@ -687,12 +693,31 @@
                                                                          required>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <p>Ben je erbij?</p>
+                                    <div class="form-check-group"-group>
+                                        <div class="form-check">
+                                        <input type="checkbox" name="aanwezig_feest" id="aanwezig_feest_avond" value="feest" class="form-check-input" checked>
+                                        <label for="aanwezig_feest_avond" class="form-check-label">Jazeker!</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-check-group"-group>
+                                        <div class="form-check">
+                                        <input type="checkbox" name="niet_aanwezig" id="niet_aanwezig_avond" value="niet_aanwezig" class="form-check-input">
+                                        <label for="niet_aanwezig_avond" class="form-check-label">Ik kan er helaas niet bij zijn.</label>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        
                         <input type="hidden" name="allergies" value="Geen">
                         <input type="hidden" name="allergies-partner" value="Geen">
                         <input type="hidden" name="aanwezig_overdag" value="">
                         <input type="hidden" name="aanwezig_diner" value="">
                         <input type="hidden" name="aanwezig_feest" value="feest">
+                        <input type="hidden" name="niet_aanwezig" value="">
 
                         <div class="row">
                             <div class="col-md-12" id="alert-wrapper-avond"></div>
