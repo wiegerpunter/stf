@@ -284,7 +284,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper-dag').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbxdXy9rbSXqNMCr3yPY1XCrW-Fc5M2aWPlExSpeZdpwH4xtaf1qdxDC_OwXOWUnlIpaMw/exec', data)    
+        $.post('https://script.google.com/macros/s/AKfycbwUFQCJImTnaQHjiUt37tbgH7AoVVrX2GzcNCog1kmLQjrxaEBZS-7adue7AP1ukDfndg/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -306,7 +306,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper-avond').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbxdXy9rbSXqNMCr3yPY1XCrW-Fc5M2aWPlExSpeZdpwH4xtaf1qdxDC_OwXOWUnlIpaMw/exec', data)    
+        $.post('https://script.google.com/macros/s/AKfycbwUFQCJImTnaQHjiUt37tbgH7AoVVrX2GzcNCog1kmLQjrxaEBZS-7adue7AP1ukDfndg/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
