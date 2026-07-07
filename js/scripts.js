@@ -185,96 +185,37 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Meike en Wieger's bruiloft",
+            title: "Sketching the Future",
 
             // Event start date
-            start: new Date('April 25, 2026 14:00'),
+            start: new Date('January 20, 2027 9:00'),
 
             // Event duration (IN MINUTES)
             // duration: 660,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Apr 26, 2026 01:00'),
+            end: new Date('January 22, 2027 17:00'),
 
             // Event Address
-            address: 'De Hut van Mie Pils, Waalre',
+            address: 'Lorentz Center, Leiden',
 
             // Event Description
-            description: "We kunnen niet wachten je te verwelkomen. Voor vragen, contacteer de ceremoniemeesters Margot of Mieke via +31 6 12345678.",
+            description: "",// TODO: write description
             
             // Event Location
-            URL: 'https://maps.app.goo.gl/iSoiyddQaawVXN6j9'
+            URL: 'https://maps.app.goo.gl/g8hqpRNnkj8RJgGf9'
         }
     });
-    var myCalendarAvond = createCalendar({
-        options: {
-            class: '',
-            // You can pass an ID. If you don't, one will be generated for you
-            id: ''
-        },
-        data: {
-            // Event title
-            title: "Meike en Wieger's bruiloft",
-
-            // Event start date
-            start: new Date('April 25, 2026 20:00'),
-
-            // Event duration (IN MINUTES)
-            // duration: 660,
-
-            // You can also choose to set an end time
-            // If an end time is set, this will take precedence over duration
-            end: new Date('Apr 26, 2026 01:00'),
-
-            // Event Address
-            address: 'De Hut van Mie Pils, Waalre',
-
-            // Event Description
-            description: "We kunnen niet wachten je te verwelkomen. Voor vragen, contacteer de ceremoniemeesters Margot of Mieke via +31 6 12345678.",
-            
-            // Event Location
-            URL: 'https://maps.app.goo.gl/iSoiyddQaawVXN6j9'
-        }
-    });
-
     $('#add-to-cal').html(myCalendar);
-    $('#add-to-cal-avond').html(myCalendarAvond);
 
 
     /************** Day and Evening guest separation ************/
     $(document).ready(function () {
-        $("#header-daggast").hide();
-        $("#header-avondgast").hide();
-    });
-    $('#invite-form').on('submit', function (e) {
-        
-        e.preventDefault();
-        $("#header-daggast").hide();
-        $("#header-avondgast").hide();
+        $("#header-daggast").show();
 
-        $("#daggast").hide();
-        $("#avondgast").hide();
-        $("#error-message").hide();
-        $("#common-content").hide();
-    
-        if (MD5($('#invite_code').val()) == 'b4683fef34f6bb7234f2603699bd0ded' ||
-            MD5($('#invite_code').val()) == 'b63a50d5deb3bb2e30575af41ece9bc3') {
-            $('#alert-wrapper-invite').hide();
-            $("#header-daggast").show();
-
-            $('#daggast').show();
-            $('#common-content').show();
-        } else if (MD5($('#invite_code').val()) == '605c34080d4bd86446422c60f4247dad' ||
-                   MD5($('#invite_code').val()) == 'd111567a751383ff129749d92c48cfae') {
-            $('#alert-wrapper-invite').hide();
-            $("#header-avondgast").show();
-            $('#avondgast').show();
-            $('#common-content').show();
-        } else {
-            $('#alert-wrapper-invite').show();
-            $('#alert-wrapper-invite').html(alert_markup('danger', '<strong>Sorry!</strong> De uitnodigingscode is niet correct.'));
-        }
+        $('#daggast').show();
+        $('#common-content').show();
     });
 
     /********************** RSVP **********************/
@@ -300,27 +241,7 @@ $(document).ready(function () {
                 // });
     });
     
-    $('#rsvp-form-avondgast').on('submit', function (e) {
-        e.preventDefault();
-        var data = $(this).serialize();
-
-        $('#alert-wrapper-avond').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
-
-        $.post('https://script.google.com/macros/s/AKfycbwUFQCJImTnaQHjiUt37tbgH7AoVVrX2GzcNCog1kmLQjrxaEBZS-7adue7AP1ukDfndg/exec', data)    
-                .done(function (data) {
-                    console.log(data);
-                    if (data.result === "error") {
-                        $('#alert-wrapper-avond').html(alert_markup('danger', data.message));
-                    } else {
-                        $('#alert-wrapper-avond').html('');
-                        $('#rsvp-modal-avond').modal('show');
-                    }
-                })
-                // .fail(function (data) {
-                //     console.log(data);
-                //     $('#alert-wrapper-avond').html(alert_markup('danger', '<strong>Sorry!</strong> Er is een issue met de server. '));
-                // });     
-    });
+    
 });
 
 /********************** Extras **********************/
