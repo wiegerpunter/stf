@@ -591,8 +591,11 @@ Features-stack
     border-right: solid 1px $keyline-color;
   }
   .rightcol {
-    padding-left: 100px;
+
+    border-left: solid 1px $keyline-color;
+    padding-right: 100px;
   }
+  
 
   .time {
     font-size: 13px;
