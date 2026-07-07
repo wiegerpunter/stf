@@ -223,9 +223,9 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper-dag').html(alert_markup('info', '<strong>Even geduld!</strong> Je gegevens worden opgeslagen.'));
+        $('#alert-wrapper-dag').html(alert_markup('info', '<strong>Patience!</strong> Saving...'));
 
-        $.post('https://script.google.com/macros/s/AKfycbwUFQCJImTnaQHjiUt37tbgH7AoVVrX2GzcNCog1kmLQjrxaEBZS-7adue7AP1ukDfndg/exec', data)    
+        $.post('https://script.google.com/macros/s/AKfycbzeKAEW1_NOnV_VSDLz7vi-kxjZRhPZHUbGQlQbmGe7Yxtdq8VonAaCkTUYKu0rEmanCg/exec', data)    
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
