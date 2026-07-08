@@ -150,7 +150,7 @@
                 </ul>
     
                 <p>
-                    The outcomes of the workshop will be summarized in a post-workshop white paper. A more detailed motivation behind the workshop can be found in the <a href="#read_mat"> reading material.</a>
+                    The outcomes of the workshop will be summarized in a post-workshop white paper.
                 </p>
     
             </div>
@@ -168,7 +168,7 @@
                 Lorentz Center, Leiden</a><br>
                 Niels Bohrweg 1, 2nd floor, 2333 CA Leiden, The Netherlands</p>
             <h4>Date</h4>
-            <p>20-22 January 2027</p>
+            <p>20 January 9:00 to 22 January 17:30 2027</p>
         </div>
     </div>
         <div class="row">
@@ -177,16 +177,16 @@
                 <h5>Costs</h5>
                 <p>The workshop is free of charge and invitation-only. We expect everyone to cover their own travel and accomodation costs.<br>
                     The Lorentz Center offers accomodation for participants at a reduced rate. The costs of this hotel are expected to be around 137 euros for one night, including breakfast and taxes.<br>
-                    More information will follow after accepting the invitation.</p>
+                    More information will follow.</p>
                 <h5>Travel</h5>
-                <p>Leiden has a train connection with Schiphol Airport of approximately 20 minutes, and with Amsterdam Central of 37 minutes.  </p>
-                <h5>Satellite events</h5>
-                <p>The workshop is hosted in the week preceding the Conference on Innovative Data systems Research (CIDR) that is hosted in Amsterdam.</p>
+                <p><a href="https://www.visitleiden.nl/en"> Leiden</a> has a train connection with Schiphol Airport of approximately 20 minutes, and with Amsterdam Central of 37 minutes.  </p>
+                <h5>Adjacent events</h5>
+                <p>The workshop is hosted in the week preceding the <a href="https://www.cidrdb.org/cidr2027"> Conference on Innovative Data systems Research (CIDR)</a> that is taking place in Amsterdam.</p>
                 <h5>Organizers</h5>
                 <p>The workshop is organized by:<br>
-                    Wieger Punter (TU Eindhoven)<br>
-                    Odysseas Papapetrou (TU Eindhoven)<br>
-                    Minos Garofalakis (Athena RC, TU Crete)
+                    Wieger Punter (TU Eindhoven). E-mail: w.r.punter [at] tue.nl. <a href="https://research.tue.nl/nl/persons/wieger-r-punter/">Link to webpage.</a><br>
+                    Odysseas Papapetrou (TU Eindhoven). E-mail: o.papapetrou [at] tue.nl. <a href="https://www.tue.nl/en/research/researchers/odysseas-papapetrou">Link to webpage.</a><br>
+                    Minos Garofalakis (Athena RC, TU Crete). E-mail: minos [at] athenarc.gr, <a href="https://minosng.github.io/">Link to webpage</a>.
                 </p>
                 <h5>Questions?</h5>
                 <p>For questions, don't hesitate to contact w.r.punter [at] tue.nl.</p>
@@ -199,191 +199,6 @@
         </div> -->
 </section>
 
-<!-- <section class="workshop-summary" id="about">
-    <div class="container">
-        <div class="row">
-            <h3>About the workshop</h3>
-
-            <p>
-                Modern data-intensive applications continuously generate massive streams of data, from network monitoring and digital twins to financial systems and AI pipelines. To analyze this data in real time, it is often impractical or impossible to store and process every record. <strong>Synopses</strong>, including techniques such as sketches, provide compact summaries that enable fast, memory-efficient analytics while maintaining provable accuracy guarantees. They are already widely used in systems ranging from databases to cloud infrastructure, yet many promising techniques remain confined to academia. This workshop is <strong>driven by real-world use cases</strong> and aims to identify where current synopsis techniques fall short, which new application domains—including modern AI systems—can benefit from them, and what challenges must be addressed to achieve broader adoption.
-            </p>
-
-            <p>
-                The workshop brings together academia and industry to identify, discuss, and prioritize open problems in synopsis techniques based on practical use cases. Together, participants will examine the technical and non-technical barriers to adoption, define research directions that address current industry needs, and develop a shared vision for the role of synopses in next-generation data-intensive and AI-driven systems. The workshop also aims to foster lasting collaborations between researchers and practitioners.
-            </p>
-
-            <p>
-                We welcome <strong>researchers</strong> working on streaming algorithms, data sketches, databases, distributed systems, and AI/ML, as well as <strong>industry practitioners</strong> developing or operating large-scale data platforms, real-time analytics systems, AI infrastructure, or applications dealing with high-volume data streams. The workshop is intended for anyone interested in applying synopsis techniques to practical problems or helping shape the next generation of efficient data processing methods.
-            </p>
-
-        </div>
-    </div>
-</section> -->
-
-<!-- <section id="sc_case" class="section-padding text-left">
-    <div class="container">
-        <div class="row"> -->
-        <!-- <h3>Motivation</h3>
-        <p>
-        Many data systems nowadays have to manage some form of streamed data, such as stock trading data, internet traffic or sensors of a physical system for digital twins.
-        The key property of this type of data is that records are continuously generated, often by multiple sources. Users want to analyze this data in real time, with low latency.
-        An example analytic is to track the number of messages sent by a specific IP-address on a network stream, 
-        which is useful for applications such as monitoring whether resources are spent adequately (for companies like AT&amp;T), 
-        whether malicious activity is taking place in your network (for cybersecurity software) or which parameter setting has the maximum likelihood (in machine learning [6]).
-        </p>
-    
-        <p>
-        The challenge in analyzing this data lies in that we cannot use the complete data stream at all times.
-         In many cases, the size of the data is too large to store and index, or can take too long to process and thus leads to a long queue of new data that needs to be stored.
-        Even if we would be able to store the full data, the nature of these real-time analytics requires the queries to be answered in the order of milliseconds, which is not feasible on such large scales, if the data is not indexed properly.
-        </p>
-    
-        <p>
-        Over the past decades, our community has been working on a variety of solutions based on <strong>synopses</strong>, small-space summaries that process the stream in one pass, where records in the stream are either processed directly, or discarded. Queries are then evaluated on the synopsis rather than on the full stream, trading exactness for efficiency.
-        Synopses always balance several competing factors: the time required to process new data (<em>ingestion time</em>), the time needed to answer queries (<em>query time</em>), the <em>memory consumption</em> of the summary and the <em>accuracy</em> of estimates. As a general rule, allocating more memory improves accuracy, but also increases both ingestion and query costs.
-        A wide range of synopses techniques have been proposed, ranging from simple approaches such as sampling [9] and histograms to more sophisticated ones, called sketches [1,3,4].
-        </p>
-    
-        <div class="paragraph sketches">
-        <h5>Sketches</h5>
-    
-        <p>
-            Sketches are a type of synopsis that serve a similar purpose to samples and histograms: compressing the data so that it occupies less space,
-             and then using the compressed representation (the sketch) to support analytics and learning.
-             Most sketches rely on basic randomization tools, typically hashing and repetition, to allow summarization with a single pass over the data.
-             This makes them very attractive in the streaming context, where each data point can be observed only once, but also in the many use cases where the data volume is very large
-            , think, for example, training of AI models.<br>
-            At a high level, a sketch works by applying a randomized projection <em>S</em> that maps a high-dimensional dataset <em>D</em> into a much smaller representation <em>S(D)</em>.
-            Then, rather than computing any function <em>f(D)</em> on the original data, we can approximate <em>f</em> by computing another function <em>f'(S(D))</em>, on the sketch,
-             i.e., the original data does not need to be stored. Sketches allow such estimates with provable error guarantees, for select functions <em>f</em>.
-        </p>
-    
-        <p>
-            Intuitively, this means that questions about the original, large domain and full dataset can be answered by operating on a significantly smaller representation, with a bounded error.
-            Sketches are typically tailored to specific classes of queries, making them highly efficient for those tasks, though less general than methods like sampling.
-        </p>
-        </div>
-    
-        <section class="challenges">
-        <h4>Challenges</h4>
-    
-        <p>
-            Despite substantial theoretical progress and meaningful impact on the practice of computer science [2], many open questions remain about the broader potential of sketches [2,5]. These typically fall in one of the following two categories:
-        </p>
-    
-        <div class="paragraph adoption-gap">
-            <h5>Adoption gap</h5>
-    
-            <p>
-            While a few sketches, as the Bloom-Filter, HyperLogLog and Count-Min sketches, are widely adopted in practice, many others remain confined to the academic world. This represents a loss of potential impact.
-            </p>
-    
-            <p>
-            Technical approaches to lead to more impact focus mainly on generalizing the expressivity of sketches [7,8], aiming to make them more flexible and broadly applicable.
-            </p>
-    
-            <p>
-            However, adoption is not determined by technical properties alone. It also depends on factors such as how results are communicated, where they are published, their timing, ease of implementation and how well their motivation matches practical needs. Understanding these technical and non-technical challenges is essential to bridging the gap between research and practice.
-            </p>
-        </div>
-    
-        <div class="paragraph ai-opportunities">
-            <h5>Novel opportunities arising from the advancements in AI</h5>
-    
-            <p>
-            At the same time, advances in data-intensive applications and AI systems highlight the need to identify novel areas and domains where sketches can play a role. The high cost of training and inference, combined with large-scale (and sometimes even distributed) data, creates strong demand for efficient summarization techniques.
-            </p>
-    
-            <p>
-            Sketches are well-suited to these settings, as they compactly represent data distributions and enable approximate reasoning. This makes them promising for tasks such as detecting concept drift in continual learning or communicating model statistics in resource-constrained environments (e.g., edge devices or federated systems). More broadly, AI workflows often tolerate approximation, making sketch-based methods a natural fit. Early work has begun to explore these directions, including applications in continual learning and federated analytics, but it is necessary to identify other roles for sketches in AI systems as well.
-            </p>
-        </div>
-    </div>
-    </div>
-</section>
-      
-<section class="workshop" id="goals">
-    <div class="container">
-        <div class="row">
-        <h3>Workshop on advanced data sketching tools</h3>
-    
-        <p>
-            In this workshop, we will bring people together from industry and academia, to identify and prioritize open problems in the use of data sketches in modern data-intensive and AI-driven systems. We aim to bridge the gap between academic research and industry needs by aligning problem definitions with real-world constraints such as scalability, latency and distribution drift over streams.
-        </p>
-    
-        <p>We invite participants from three research communities:</p>
-    
-        <ul class="participants">
-            <li>Sketch algorithm designers</li>
-            <li>AI/ML researchers working on model efficiency and robust online learning.</li>
-            <li>Systems researchers building data platforms and large-scale ML infrastructure</li>
-        </ul>
-    
-        <p>
-            These communities frequently share common challenges in terms of data management, yet their assumptions and evaluation criteria often diverge.
-            We complement the team of researchers with industry practitioners (both in AI and data) who will contribute as problem owners, providing use cases and constraints and grounding the discussions to the real world. At the same time, practitioners will shed light on the roadblocks they are facing today on adopting sketches in their day-to-day operations.
-        </p>
-    </div>
-
-    <div class="workshop-goals">
-        <div class="container">
-            <div class="row">
-                    <h4>Workshop goals</h4>
-            
-                    <p>
-                    Our <strong>first goal</strong> is to bridge the gap between industry and academia. There are tens of sketch papers published every year, but there is no good overview on why some research is actually implemented, and why some algorithms do not make it out of the academic literature.
-                    </p>
-            
-                    <p>
-                    Our <strong>second goal</strong> is to create a common vision on what the key open problems are for the next decade that can benefit from the development of existing or new sketches. We believe that the community is helped by asking ourselves which problems are worth solving for algorithm designers from academia, according to current industry needs? Also, which challenges deserve more of researchers’ attention, particularly considering the recent advancements in AI and ML?
-                    </p>
-            
-                    <p>
-                    Our <strong>third goal</strong> is to sustain existing and foster new professional collaborations among academic and industrial partners, with a focus on advancing the workshop's agenda.
-                    </p>
-                </div>
-            </div>
-        </div>
-</section>
-    
-<section class="expected-outcomes" id="outcomes">
-    <div class="container">
-        <div class="row">
-            <h4>Expected outcomes</h4>
-        
-            <p>The expected workshop outcomes are:</p>
-        
-            <ul>
-                <li>
-                Descriptions of (families of) industry problems requiring advanced data sketching tools.
-                </li>
-                <li>
-                Understanding and documenting the roadblocks and the steps needed to achieve broader adoption in industry. This will involve:
-                (a) identifying the non-technical roadblocks to the adoption of sketches in practice,
-                (b) prioritizing and addressing unsupported functionality,
-                (c) developing guidelines for practitioners,
-                (d) creating abstractions that unify the theory of synopses, and,
-                (e) proposing changes in teaching, and in the long run, potentially submitting recommendations to national and international organizations like the NVAO and ACM regarding the inclusion of sketches to computer science curricula.
-                </li>
-                <li>
-                Requirements for software tools, e.g., a platform that aids developers in finding the right sketch for their problems.
-                </li>
-            </ul>
-        
-            <p>In the weeks/months to follow:</p>
-        
-            <ol>
-                <li>A vision statement for the community that is shareable and can be updated in the future, also by people that do not participate in the workshop.</li>
-                <li>Joint projects following the workshop, to achieve the workshops intended outcomes.</li>
-                <li>Research papers on solutions for the industry problems defined during the workshop.</li>
-                <li>Adoption of these solutions from industry partners and practitioner-oriented/technology-transfer publications and technical reports.</li>
-            </ol>
-            <br></br>
-        </div>
-    </div> -->
-<!-- </section> -->
-
-
     <!-- Events (full program) -->
 <section class="events section-padding" id="program">
     <div class="container">
@@ -395,7 +210,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>Below is the full program for the 3-day workshop. The program is subject to change, but we will keep you updated.<br>
+                <p>Below is the full tentative program for the 3-day workshop.<br>
                 Before the onsite workshop, there is an online preparation meeting where we will discuss expectations of the workshop, briefly present the use cases, so that the time during the onsite workshop is used as efficient as possible.</p>
             </div>
         </div>
@@ -601,7 +416,7 @@
             <div class="col-md-12 text-left">
                 <h4>Reading Material
                 </h4>
-                <p>We refer to the following material to read more about (1) basic understanding of sketch techniques, (2) vision papers on the field and (3) a more in-depth motivation for this workshop.</p>
+                <p>We refer to the following material to read more about basic understanding of sketch techniques and vision papers on the field.</p>
                 <h5>Basic understanding of sketch techniques</h5>
                 <ol>
                     <li>Broder, A. Z., and Mitzenmacher, M. Survey: Network applications of bloom filters: A
@@ -625,10 +440,6 @@
                         19th ACM International Conference on Distributed and Event-Based Systems (New York, NY,
                         USA, 2025), DEBS ’25, Association for Computing Machinery, p. 3–4. https://doi.org/10.1145/3701717.3733848</li>
                 </ol>
-                <h5>Workshop proposal</h5>
-                <a href="files/Sketching_the_future__workshop_proposal.pdf" target="_blank">
-                    View the workshop proposal (PDF)
-                </a>
             </div>
         </div>
     </div>
