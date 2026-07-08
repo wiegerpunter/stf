@@ -51,7 +51,7 @@ ul, ol {
   padding: 0;
 }
 ul li {
-  list-style: none;
+  list-style: disc;
 }
 section .header {
   padding-bottom: 30px;
@@ -251,13 +251,15 @@ Navigation
 Hero
 ========================================================================== */
 .hero {
-  min-height: 1000px;
+  min-height: 175px;
   background: url('../img/poster_bg.png') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+  overflow: hidden;
+
   @media (max-width: 768px) {
     background-position:35% center; /* Adjust the position for mobile */
   }
@@ -299,6 +301,19 @@ Hero
     width: 55%;
     margin-bottom: 12%;
   }
+  
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5); /* white overlay, 50% opacity */
+  z-index: 1;
+}
+
+.hero > * {
+position: relative;
+z-index: 2;
 }
 .navigation {
   transition: all 300ms ease-in-out;
@@ -318,10 +333,10 @@ header {
   position: relative;
   width: 1170px;
   margin: 0 auto;
-  transition: padding 300ms ease-in-out;
+  transition: padding 30ms ease-in-out;
 
   a {
-    color: $txt-light;
+    color: $txt-primary;
     text-transform: uppercase;
     font-size: $nav-font-size;
 
@@ -333,7 +348,7 @@ header {
     display: inline-block;
   }
   .logo img {
-    height: 19px;
+    height: 0px;
   }
   ul.primary-nav {
     margin: 0 0 0 75px;
@@ -343,9 +358,9 @@ header {
       display: inline;
 
       a {
-        color: $txt-light;
+        color: $txt-primary;
         padding-right: 25px;
-
+        
         &:hover {
           color: $accent-color;
         }
@@ -360,7 +375,7 @@ header {
       display: inline;
 
       a {
-        color: $txt-light;
+        color: $txt-primary;
 
         &:hover {
           color: $accent-color;
@@ -382,7 +397,7 @@ header {
   }
 }
 .down-arrow {
-  color: #fff;
+  color: #000000;
   font-size: 30px;
   position: absolute;
   bottom: 30px;
